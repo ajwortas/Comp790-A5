@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seconds: 90
-  uiElement: {fileID: 0}
+  uiElement: {fileID: 1050458164}
 --- !u!1 &406135339
 GameObject:
   m_ObjectHideFlags: 0

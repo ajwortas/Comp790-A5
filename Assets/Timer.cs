@@ -14,6 +14,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         timePassed = 0;
+        uiElement.text = "Timer: " + seconds;
     }
 
     // Update is called once per frame
