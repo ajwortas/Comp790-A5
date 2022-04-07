@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Timer : MonoBehaviour
@@ -24,7 +25,7 @@ public class Timer : MonoBehaviour
 
         if (timePassed > seconds)
         {
-            //END OF GAME
+            SceneManager.LoadScene("GameOverScenes/GameOver");
         }
 
         long secondsPassed = Mathf.FloorToInt(seconds - timePassed);

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorTrigger : MonoBehaviour
 {
@@ -13,18 +14,12 @@ public class DoorTrigger : MonoBehaviour
      * 1 = opening is playing
      * 2 = first fetch 
      * 3 = second fetch
-     *
-     * 
      */
     public int progress = 0;
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter(Collider other)
     {
+
+        //Audio Player
         if(other.tag == "Player")
         {
             switch (progress)
@@ -55,6 +50,7 @@ public class DoorTrigger : MonoBehaviour
             }
         }
 
+        //Check for the first item
         if(other.gameObject.name == "APartOfYou" & progress == 2){
             if (firstFetch.isPlaying)
             {
@@ -65,13 +61,13 @@ public class DoorTrigger : MonoBehaviour
             progress = 3;
         }
 
+        //Check for the second item
         if (other.tag == "Torch" & progress == 3){
             if (secondFetch.isPlaying)
             {
                 secondFetch.Stop();
             }
-
-            //Scene Transition
+            SceneManager.LoadScene("MazeScene/Maze");
         }
     }
 }
