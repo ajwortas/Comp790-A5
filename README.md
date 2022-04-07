@@ -1,6 +1,7 @@
 # Comp790-A5
 
 Video Link: https://youtu.be/gtHA1bv8wpo
+Please note that the audio is currently bugged on the video for some reason, and therefore the music/sfx/voice lines and commentary are inaudible.
 
 Free Assets:
 https://assetstore.unity.com/packages/2d/textures-materials/stone-wall-photo-based-pbr-160540
