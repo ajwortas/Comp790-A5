@@ -54,7 +54,24 @@ public class DoorTrigger : MonoBehaviour
                     break;
             }
         }
-        //Add logic for other objects entering
 
+        if(other.gameObject.name == "APartOfYou" & progress == 2){
+            if (firstFetch.isPlaying)
+            {
+                firstFetch.Stop();
+            }
+            secondFetch.Play();
+            Destroy(other.gameObject);
+            progress = 3;
+        }
+
+        if (other.tag == "Torch" & progress == 3){
+            if (secondFetch.isPlaying)
+            {
+                secondFetch.Stop();
+            }
+
+            //Scene Transition
+        }
     }
 }
